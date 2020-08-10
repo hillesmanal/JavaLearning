@@ -1,4 +1,4 @@
-package pack2;
+
 
 public class arrayAssignment {
 
@@ -6,8 +6,8 @@ public class arrayAssignment {
 		// TODO Auto-generated method stub
 		
 //sumArray();
-//removeDuplicate();
-reverseArray();
+removeDuplicate();
+//reverseArray();
 //inserZero();
 
 	}
@@ -66,13 +66,33 @@ reverseArray();
 	}
 
 	private static void removeDuplicate() {
-		// TODO Auto-generated method stub
-//		3. Write a Program to remove the duplicate elements in an array.
 //		Example : int arr[] = {3,4,1,2,4,6,2,8,1,7}
 //		Output = 3,4,1,2,6,8,7
 		int arr[] = {3,4,1,2,4,6,2,8,1,7};
-		int dupArray= new arr[];
+		int count =0;
+		for (int i =0;i<arr.length;i++) {
+			for (int j=i+1;j<arr.length;j++) {
+				if (arr[i]==arr[j]) {
+					count++;
+				}
+			}}
+		int i =0;
+		int j=i+1;
+		int [] dupArray = new int [arr.length-count]	;
+		
+		dupArray[j]=arr[i];
+		for ( i =0;i<arr.length;i++) {
+			for ( j=i+1;j<arr.length;j++) {
+				if (arr[j]== arr[i] ){
+					dupArray[j]=arr[i+1];
+				}
+		}
+
+	
 	}
+		for (int n:dupArray) {
+			System.out.println(n);}
+		}
 
 	private static void sumArray() {
 		// TODO Auto-generated method stub
