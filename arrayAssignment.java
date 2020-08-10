@@ -9,6 +9,7 @@ public class arrayAssignment {
 removeDuplicate();
 //reverseArray();
 //inserZero();
+hi there 
 
 	}
 
