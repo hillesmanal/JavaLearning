@@ -1,6 +1,6 @@
 package array;
 
-
+import java.util.Arrays;
 
 public class arrayAssignment {
 
@@ -72,28 +72,24 @@ removeDuplicate();
 //		Example : int arr[] = {3,4,1,2,4,6,2,8,1,7}
 //		Output = 3,4,1,2,6,8,7
 		int arr[] = {3,4,1,2,4,6,2,8,1,7};
-		int count =0;
-		for (int i =0;i<arr.length;i++) {
-			for (int j=i+1;j<arr.length;j++) {
-				if (arr[i]==arr[j]) {
-					count++;
+		// //Assuming all elements in input array are unique
+		int nuOfUniqueElements = arr.length;
+		for (int i =0;i<nuOfUniqueElements;i++) {
+			for (int j=i+1;j<nuOfUniqueElements;j++) {
+				//if two elements are equal
+				if (arr[i] == arr[j]) {
+			    //Replace duplicate element with last unique element
+				arr[j]=arr[nuOfUniqueElements-1];
+				nuOfUniqueElements--;
+				j--;
+				
 				}
-			}}
-		int i =0;
-		int j=i+1;
-		int [] dupArray = new int [arr.length-count]	;
-		
-		dupArray[j]=arr[i];
-		for ( i =0;i<arr.length;i++) {
-			for ( j=i+1;j<arr.length;j++) {
-				if (arr[j]== arr[i] ){
-					dupArray[j]=arr[i+1];
-				}
+			}
+			
 		}
-
+	     int[] uniqueArr = Arrays.copyOf(arr, nuOfUniqueElements);
 	
-	}
-		for (int n:dupArray) {
+		for (int n:uniqueArr) {
 			System.out.println(n);}
 		}
 
