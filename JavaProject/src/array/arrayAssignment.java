@@ -8,10 +8,11 @@ public class arrayAssignment {
 		// TODO Auto-generated method stub
 		
 //sumArray();
-removeDuplicate();
+//removeDuplicate();
 //reverseArray();
 //inserZero();
 //hi there 
+	removeDuplicate();	
 
 	}
 
@@ -67,7 +68,9 @@ removeDuplicate();
 			 //printing zero instead of 1.
 		 }
 	}
-
+/**
+ * This method is used to remove a duplicate element from array
+ */
 	private static void removeDuplicate() {
 //		Example : int arr[] = {3,4,1,2,4,6,2,8,1,7}
 //		Output = 3,4,1,2,6,8,7
