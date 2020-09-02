@@ -2,6 +2,8 @@ package array;
 
 import java.util.Arrays;
 
+//import java.util.Arrays;
+
 public class arrayAssignment {
 
 	public static void main(String[] args) {
