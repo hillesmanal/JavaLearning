@@ -10,6 +10,9 @@ public class SuperClassRealExample {
 
 }
 class Person{
+	Person(){
+		
+	}
 	int id;
 	String name;
 	Person(int id,String name){
